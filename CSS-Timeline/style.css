@@ -1,0 +1,175 @@
+@import "http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
+
+header:after,
+header:before, 
+#cctimeline .cctimeline-item:after, 
+#cctimeline .cctimeline-item:before {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+#cctimeline .cctimeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#cctimeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+
+#cctimeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#cctimeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #a4c400;
+  left: 50%;
+  top: 0;
+  position: absolute;
+}
+
+#cctimeline .cctimeline-item .cctimeline-icon {
+  background: #008a00;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -23px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#cctimeline .cctimeline-item i.fa {
+ color:#fff;
+ font-size:24px;
+ padding:13px;
+}
+
+#cctimeline .cctimeline-item .cctimeline-content {
+  width: 45%;
+  background: #a4c400;
+  padding: 20px;
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cctimeline .cctimeline-item .cctimeline-content:before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #a4c400;
+}
+
+#cctimeline .cctimeline-item .cctimeline-content.right {
+  float: right;
+}
+#cctimeline .cctimeline-item .cctimeline-content.right:before {
+  content: '';
+  right: 45%;
+  left: inherit;
+  border-left: 0;
+  border-right: 7px solid #a4c400;
+}
+
+
+#cctimeline .cctimeline-item .cctimeline-content h2 {
+  padding: 15px;
+  background: #008a00;
+  color: #fff;
+  margin: -20px -20px 0 -20px;
+  font-weight: 300;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+
+#cctimeline .cctimeline-item .cctimeline-content .btn {
+  padding: 5px 15px;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #008a00;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  -webkit-box-shadow: 2px 2px 0 #008a00;
+  -moz-box-shadow: 2px 2px 0 #008a00;
+  -ms-box-shadow: 2px 2px 0 #008a00;
+  box-shadow: 2px 2px 0 #008a00;
+}
+#cctimeline .cctimeline-item .cctimeline-content .btn:hover {
+  box-shadow: none;
+  top: 2px;
+  left: 2px;
+  -webkit-box-shadow: 2px 2px 0 transparent;
+  -moz-box-shadow: 2px 2px 0 transparent;
+  -ms-box-shadow: 2px 2px 0 transparent;
+  box-shadow: 2px 2px 0 transparent;
+}
+
+@media screen and (max-width: 768px) {
+  #cctimeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+  }
+  #cctimeline:before {
+    left: 0;
+  }
+  #cctimeline .cctimeline-item .cctimeline-content {
+    width: 90%;
+    float: right;
+  }
+  #cctimeline .cctimeline-item .cctimeline-content:before, #cctimeline .cctimeline-item .cctimeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+    border-right: 7px solid #008a00;
+  }
+  #cctimeline .cctimeline-item .cctimeline-icon {
+    left: 0;
+  }
+}
