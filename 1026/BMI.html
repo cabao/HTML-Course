@@ -4,17 +4,28 @@
     <script>
         function f()
         {
-            alert("Hello");
+            var S = document.getElementById("S").value;
+            var H = document.getElementById("H").value;
+            var W = document.getElementById("W").value;
+            var BMI=W/((H/100)*(H/100));
+            if (BMI < 18.5)
+                alert("體重過輕");
+            else if (BMI >= 18.5 && BMI < 24)
+                alert("健康體重");
+            else if (BMI >= 24 && BMI < 27)
+                alert("體重過重");
+            else 
+                alert("肥胖");
         }
     </script>
 </head>
 <body>
 
-<form action="javascript:f();">
-身高 : <input type="text" name="FirstName" value=""><br>
-體重 : <input type="text" name="LastName" value=""><br>
+<form id="frm1" action="javascript:f();">
+身高 : <input id="H" type="text" value=""><br>
+體重 : <input id="W" type="text" value=""><br>
 性別 : 
-<select>
+<select id = "S">
   <option value="male">男</option>
   <option value="female">女</option>
 </select>
