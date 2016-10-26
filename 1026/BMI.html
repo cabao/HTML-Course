@@ -15,7 +15,10 @@
             else if (BMI >= 24 && BMI < 27)
                 alert("體重過重");
             else 
+            {
                 alert("肥胖");
+                document.getElementById("pic").innerHTML = "<img src='https://top1health.blob.core.windows.net/cdn/am/15011/39829.jpg'>";
+            }
         }
     </script>
 </head>
@@ -32,7 +35,7 @@
 <br>
 <input type="submit" value="Submit">
 </form>
-
+<div id = "pic"></div>
 </body>
 </html>
 
