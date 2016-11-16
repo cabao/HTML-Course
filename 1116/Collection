@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="f()">
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script>
+		function f()
+		{
+		        var i;
+			    var list=[{"ig":"http://pic.gomaji.com/products/974/141974/141974_3_r.jpg", "tl":"Test1", "ct":"Test Content", "lk":"http://www.gomaji.com/Taipei_p141974.html"}, 
+		                  {"ig":"http://pic.gomaji.com/uploads/stores/051/66051/141974/66051-141974-m.jpg", "tl":"Test2", "ct":"Test Content", "lk":"http://www.gomaji.com/Taipei_p141974.html"}, 
+				          {"ig":"http://pic.gomaji.com/uploads/stores/051/66051/79151/DSC_0268.jpg", "tl":"Test3", "ct":"Test Content", "lk":"http://www.gomaji.com/Taipei_p141974.html"}
+				         ];
+                var str="";
+		    for (i = 0; i <list.length; i++)
+			{
+			    str+='<li class="collection-item avatar">';
+                str+='<img src='+list[i].ig+' alt="" '+'class="circle">';
+                str+='<span class="title">'+list[i].tl+'</span>';
+                str+='<p>'+list[i].ct+'</p>';
+                str+='<a href='+list[i].lk+' class="secondary-content">'+'<i class="material-icons">grade</i></a>';
+                str+='</li>';
+			}
+			document.getElementById("aaa").innerHTML=str;
+		}
+	  </script>
+  <ul class="collection" id="aaa">
+
+  </ul>
+            
+
+    </body>
+  </html>
