@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	  <meta charset="utf-8">
+      <title></title>
+
+      <script type="text/javascript" language="javascript">
+
+        function videopanel(id) {
+            str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+            return str;
+        }
+
+		/// 取代原程式的jQuery("#id").bind("click touch" ...之作用 ///
+      function videochange(id) {
+			document.getElementById("player").innerHTML = videopanel(id);
+		}
+
+      </script>
+
+   </head>
+   <body>
+    <!--Import jQuery before materialize.js-->
+    <!--//<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+
+			<div id="player">
+			<iframe width="100%" height="350" src="http://www.youtube.com/embed/ANSI0YjVLRg" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+            <br /><br />
+
+			<div id="videolist">
+			</div>
+
+			<script>
+			var videoid = new Array("StEd_E7nJ38","LVk2T9gQLro","fiA9jlW0Qto","gOk-Guchg2E","BjZ3U97RPjg","IEvOBoso3Xk");
+			var videotitle = new Array("中華電拼了 699無限上網延到明年","TVBS新聞報導HoJava(賀呷嗎)美食APP","壹電視報導HoJava(賀呷嗎)美食APP","新唐人亞太新聞報導HoJava(賀呷嗎)美食APP","TBC台中都會新聞報導HoJava(賀呷嗎)美食APP","威達雲端電訊中都新聞採訪報導HoJava(賀呷嗎)美食APP");
+			var i=0;
+			var str = '<ul data-role="listview" data-inset="true" data-filter="true" class="collection">';
+			for ( i=0 ; i<6 ; i++)
+      {
+          str += '<li class="collection-item" ><a href=\'javascript:videochange("' + videoid[i] + '")\'>' + videotitle[i] + '</a></li>';
+      }
+			str += '</ul>';
+			document.getElementById("videolist").innerHTML = str;
+			</script>
+   </body>
+</html>
